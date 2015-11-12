@@ -1,8 +1,19 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+Abstract Class Controller_Base {
+ 
+    protected $registry;
+    protected $template;
+    protected $layouts; // шаблон
+     
+    public $vars = array();
+ 
+    // в конструкторе подключаем шаблоны
+    function __construct($registry) {
+        $this->registry = $registry;
+        // шаблоны
+        $this->template = new Template($this->layouts, get_class($this));
+    }
+ 
+    abstract function index();  
+}
