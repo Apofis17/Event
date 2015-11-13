@@ -1,0 +1,11 @@
+{
+    "name": "vendor/event",
+    "description": "Описание проекта event.",
+    "authors": [
+        {
+            "name": "apofis",
+            "email": "your@email.here"
+        }
+    ],
+    "require": {}
+}
