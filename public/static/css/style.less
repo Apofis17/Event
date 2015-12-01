@@ -1,0 +1,137 @@
+@color_first: #02988d;
+@color_last:#6a0ca5;
+@color_lite_firs:#f7f403;
+@font:'Noto Sans', sans-serif;
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  border-width: 1px 1px 1px 2px;
+  border-color: #777;
+  background-color: #aaa;
+}
+::-webkit-scrollbar-thumb:hover {
+  border-width: 1px 1px 1px 2px;
+  border-color: #555;
+  background-color: #777;
+}
+::-webkit-scrollbar-track {
+  border-width: 0;
+}
+::-webkit-scrollbar-track:hover:vertical {
+  border-left: solid 1px #aaa;
+  background-color: #eee;
+}
+::-webkit-scrollbar-track:hover:horizontal {
+  border-top: solid 1px #aaa;
+  background-color: #eee;
+}
+.my_btn {
+  font-family: @font;
+  background: @color_last;
+  color: white !important;
+  border-radius: 0;
+  font-size: 1em;
+}
+.white-block {
+  padding: 10px;
+  background: white;
+}
+.my_btn_not {
+  font-family: @font;
+  background: @color_lite_firs;
+  color: #5f5f5f !important;
+  border-radius: 0;
+  font-size: 1em;
+}
+.display_none {
+  display: none !important;
+}
+.status {
+  opacity: 0.75;
+  font-size: 1.5em;
+  text-align: left;
+  padding: 3px 2%;
+  height: auto;
+  color: white;
+}
+.error {
+  background: red;
+}
+.ok {
+  background: @color_first;
+}
+body {
+  font-family: @font !important;
+  .navbar {
+    .navbar_title {
+      a {
+        font-family: @font;
+        color: @color_first !important;
+        font-size: 2em;
+      }
+    }
+    .my_btn {
+      margin-top: 14px;
+    }
+    .menu {
+      width: auto;
+    }
+  }
+  .base_block {
+    padding: 0;
+    .full_block {
+      height: 100%;
+      width: 100%;
+      left: 0;
+      margin: 0;
+      background: rgba(3, 153, 140, 0.7);
+      z-index: 1;
+      top: 0;
+      position: fixed;
+      text-align: center;
+      .sing {
+        padding: 10px;
+        background: white;
+        z-index: 2;
+        label {
+          font-size: 1em;
+          text-align: right;
+          margin-right: 5px;
+          width: 35%;
+        }
+        input {
+          margin-right: 5px;
+          width: 60%;
+          float: right;
+          border-radius: 0;
+          background: white;
+          border: 1px solid @color_first;
+        }
+        input:focus {
+          border: 1px solid @color_last;
+          outline: none;
+        }
+        button:nth-child(2) {
+          margin-left: 5px;
+        }
+        .status {
+          text-align: left;
+          padding: 3px 2%;
+          height: auto;
+          color: white;
+          opacity: 0.7;
+          width: 90%;
+          font-size: .9em;
+          margin: auto;
+        }
+      }
+    }
+    #map {
+      border: 1px solid #5f5f5f;
+      width: auto;
+      height: 500px;
+    }
+  }
+}

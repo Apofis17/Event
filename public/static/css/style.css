@@ -1,0 +1,129 @@
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  border-width: 1px 1px 1px 2px;
+  border-color: #777;
+  background-color: #aaa;
+}
+::-webkit-scrollbar-thumb:hover {
+  border-width: 1px 1px 1px 2px;
+  border-color: #555;
+  background-color: #777;
+}
+::-webkit-scrollbar-track {
+  border-width: 0;
+}
+::-webkit-scrollbar-track:hover:vertical {
+  border-left: solid 1px #aaa;
+  background-color: #eee;
+}
+::-webkit-scrollbar-track:hover:horizontal {
+  border-top: solid 1px #aaa;
+  background-color: #eee;
+}
+.my_btn {
+  font-family: 'Noto Sans', sans-serif;
+  background: #6a0ca5;
+  color: white !important;
+  border-radius: 0;
+  font-size: 1em;
+}
+.white-block {
+  padding: 10px;
+  background: white;
+}
+.my_btn_not {
+  font-family: 'Noto Sans', sans-serif;
+  background: #f7f403;
+  color: #5f5f5f !important;
+  border-radius: 0;
+  font-size: 1em;
+}
+.display_none {
+  display: none !important;
+}
+.status {
+  opacity: 0.75;
+  font-size: 1.5em;
+  text-align: left;
+  padding: 3px 2%;
+  height: auto;
+  color: white;
+}
+.error {
+  background: red;
+}
+.ok {
+  background: #02988d;
+}
+body {
+  font-family: 'Noto Sans', sans-serif !important;
+}
+body .navbar .navbar_title a {
+  font-family: 'Noto Sans', sans-serif;
+  color: #02988d !important;
+  font-size: 2em;
+}
+body .navbar .my_btn {
+  margin-top: 14px;
+}
+body .navbar .menu {
+  width: auto;
+}
+body .base_block {
+  padding: 0;
+}
+body .base_block .full_block {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  margin: 0;
+  background: rgba(3, 153, 140, 0.7);
+  z-index: 1;
+  top: 0;
+  position: fixed;
+  text-align: center;
+}
+body .base_block .full_block .sing {
+  padding: 10px;
+  background: white;
+  z-index: 2;
+}
+body .base_block .full_block .sing label {
+  font-size: 1em;
+  text-align: right;
+  margin-right: 5px;
+  width: 35%;
+}
+body .base_block .full_block .sing input {
+  margin-right: 5px;
+  width: 60%;
+  float: right;
+  border-radius: 0;
+  background: white;
+  border: 1px solid #02988d;
+}
+body .base_block .full_block .sing input:focus {
+  border: 1px solid #6a0ca5;
+  outline: none;
+}
+body .base_block .full_block .sing button:nth-child(2) {
+  margin-left: 5px;
+}
+body .base_block .full_block .sing .status {
+  text-align: left;
+  padding: 3px 2%;
+  height: auto;
+  color: white;
+  opacity: 0.7;
+  width: 90%;
+  font-size: .9em;
+  margin: auto;
+}
+body .base_block #map {
+  border: 1px solid #5f5f5f;
+  width: auto;
+  height: 500px;
+}
