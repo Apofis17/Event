@@ -120,7 +120,8 @@ $(function () {
                 address:address,
                 message:message,
                 date_start: date_start,
-                date_stop:date_stop
+                date_stop:date_stop,
+                id: add_event.id
             },
             success: function (request) {
                 var data = eval("(" + request + ")");
@@ -178,7 +179,7 @@ function addMarker(location, map) {
                 window.location.href = '/error/?' + data.code
             }
             else if (data.status == 'ok') {
-                event.id = data.args.id;
+                add_event.id = data.args.id;
             }
         }
     });

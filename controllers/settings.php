@@ -65,7 +65,27 @@ Class Controller_Settings Extends Controller_Base
         }
     }
     function addEventFull(){
-        
+        try {
+            session_start();
+            $id = $_POST['id'];
+            if(empty($id))
+                echo json_encode(array('status' => 'error', 'code' => '000'));
+            $array = array(
+                'id' => $id,
+                'user_id' => $_SESSION['user'][0],
+                'address' => $_POST['address'],
+                'message' => $_POST['message'],
+                'date_start' => $_POST['date_start'],
+                'date_stop' => $_POST['date_stop'],
+                'coordinates' => $_POST['coordinates'],
+                );
+            $model = new Model_profileEvent();
+            $model->addEventFull($array);
+        }
+        catch (Exception $e){
+            echo json_encode(array('status' => 'error', 'code' => '000'));
+        }
+
     }
 
 }

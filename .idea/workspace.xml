@@ -2,64 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f364d1da-de6b-4a8d-afc3-f4e43e02a8b4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/layouts/admin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/apofis.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/bootstrap/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/bootstrap/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/error.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/error/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/settings/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/custom/js/jquery.ui.datepicker-ru.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/layouts/layout.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/model_profileevent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/model_profileuser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/bootstrap/js/npm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/js/npm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/psql.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/js/settings.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/css/settings.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/settings.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/sing.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/css/style.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/css/style.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/тз" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MVC_STANDART_VERSION/classes/controller_base.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MVC_STANDART_VERSION/classes/model_base.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MVC_STANDART_VERSION/classes/router.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MVC_STANDART_VERSION/classes/template.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MVC_STANDART_VERSION/controllers/article.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MVC_STANDART_VERSION/controllers/category.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MVC_STANDART_VERSION/controllers/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MVC_STANDART_VERSION/core/core.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MVC_STANDART_VERSION/css/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MVC_STANDART_VERSION/models/model_article.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MVC_STANDART_VERSION/models/model_category.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MVC_STANDART_VERSION/models/model_comments.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MVC_STANDART_VERSION/views/article/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MVC_STANDART_VERSION/views/category/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MVC_STANDART_VERSION/views/index/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MVC_STANDART_VERSION/views/layouts/first_layouts.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/model_users.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nbproject/project.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nbproject/project.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/myless.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/myless.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/myless.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/layouts/first_layouts.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/classes/models_base.php" afterPath="$PROJECT_DIR$/classes/model_base.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.php" afterPath="$PROJECT_DIR$/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/controller_base.php" afterPath="$PROJECT_DIR$/classes/controller_base.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/core.php" afterPath="$PROJECT_DIR$/core/core.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/index.php" afterPath="$PROJECT_DIR$/controllers/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.php" afterPath="$PROJECT_DIR$/public/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index/index.php" afterPath="$PROJECT_DIR$/views/index/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/registry.php" afterPath="$PROJECT_DIR$/classes/registry.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/router.php" afterPath="$PROJECT_DIR$/classes/router.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/template.php" afterPath="$PROJECT_DIR$/classes/template.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/model_profileevent.php" afterPath="$PROJECT_DIR$/models/model_profileevent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/js/settings.js" afterPath="$PROJECT_DIR$/public/static/js/settings.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/settings.php" afterPath="$PROJECT_DIR$/controllers/settings.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="event.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,10 +39,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/views/settings/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.40734825">
+                <state vertical-scroll-proportion="-0.0">
                   <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
                   <folding />
                 </state>
@@ -113,25 +59,35 @@
               </provider>
             </entry>
           </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="settings.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/public/static/js/settings.js">
+          <file leaf-file-name="model_profileevent.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/models/model_profileevent.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.2769231">
-                  <caret line="113" column="40" selection-start-line="113" selection-start-column="40" selection-end-line="113" selection-end-column="40" />
+                <state vertical-scroll-proportion="0.6645367">
+                  <caret line="55" column="43" selection-start-line="55" selection-start-column="43" selection-end-line="55" selection-end-column="43" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="settings.php" pinned="false" current-in-tab="false">
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="settings.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/static/js/settings.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="123" column="32" selection-start-line="123" selection-start-column="32" selection-end-line="123" selection-end-column="32" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="settings.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/controllers/settings.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-11.416667">
-                  <caret line="51" column="43" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
+                <state vertical-scroll-proportion="0.7364217">
+                  <caret line="80" column="16" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
                   <folding />
                 </state>
               </provider>
@@ -180,7 +136,6 @@
         <option value="$PROJECT_DIR$/views/layouts/layout.php" />
         <option value="$PROJECT_DIR$/psql.sql" />
         <option value="$PROJECT_DIR$/controllers/error.php" />
-        <option value="$PROJECT_DIR$/models/model_profileevent.php" />
         <option value="$PROJECT_DIR$/public/static/css/style.less" />
         <option value="$PROJECT_DIR$/public/static/css/style.css" />
         <option value="$PROJECT_DIR$/public/static/css/sryle_less.less" />
@@ -188,6 +143,7 @@
         <option value="$PROJECT_DIR$/views/settings/index.php" />
         <option value="$PROJECT_DIR$/public/static/js/settings.js" />
         <option value="$PROJECT_DIR$/controllers/settings.php" />
+        <option value="$PROJECT_DIR$/models/model_profileevent.php" />
       </list>
     </option>
   </component>
@@ -261,6 +217,9 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
+      </pane>
+      <pane id="Scratches">
+        <subPane />
       </pane>
       <pane id="ProjectPane">
         <subPane>
@@ -401,32 +360,6 @@
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="style.less" />
-              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -471,9 +404,6 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
-      </pane>
-      <pane id="Scratches">
-        <subPane />
       </pane>
     </panes>
   </component>
@@ -626,23 +556,8 @@
           <line>11</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/models/model_profileevent.php</url>
-          <line>45</line>
-          <option name="timeStamp" value="91" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/models/model_profileevent.php</url>
-          <line>46</line>
-          <option name="timeStamp" value="94" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/controllers/settings.php</url>
-          <line>56</line>
-          <option name="timeStamp" value="95" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="96" />
+      <option name="time" value="97" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PhpWebAppRunConfigurationType">
@@ -781,13 +696,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/static/css/style.css.map">
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/static/js/npm.js">
@@ -916,14 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/model_profileevent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35714287">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/error.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.4285715">
@@ -991,24 +898,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/settings/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40734825">
+        <state vertical-scroll-proportion="-0.0">
           <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/settings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.416667">
-          <caret line="51" column="43" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/static/js/settings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2769231">
-          <caret line="113" column="40" selection-start-line="113" selection-start-column="40" selection-end-line="113" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="102" column="8" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7364217">
+          <caret line="80" column="16" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/model_profileevent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6645367">
+          <caret line="55" column="43" selection-start-line="55" selection-start-column="43" selection-end-line="55" selection-end-column="43" />
           <folding />
         </state>
       </provider>

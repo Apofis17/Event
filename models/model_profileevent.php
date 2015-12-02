@@ -49,6 +49,21 @@ Class Model_profileEvent Extends Model_Base
         return $result;
     }
 
+    function addEventFull($array){
+        $this->deleteTable();
+        $result = $this->event_by(array(
+            'id' => $array['id'],
+            'user_id' => $array['user_id'],
+        ));
+        if(empty($result)) return false;
+        foreach ($array as $key=>$value) {
+            $this->$key = $value;
+        }
+        $result = $this->save();
+
+
+    }
+
     public function fieldTable()
     {
         return array(
