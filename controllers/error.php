@@ -9,6 +9,12 @@ Class Controller_Error Extends Controller_Base
     function index()
     {
         $error = $this->codeError($_GET['code']);
+        if($error == '/') {
+            session_start();
+            session_destroy();
+            http_redirect('/');
+            exit();
+        }
         $this->template->vars('error', $error);
         $this->template->view('index');
         exit();
@@ -38,8 +44,13 @@ Class Controller_Error Extends Controller_Base
                 break;
             case 004: {
                 $error = 'Произошла ошибка попробуйте еще раз';
-            }
-                break;
+            }break;
+            case 005: {
+                $error = '/';
+            }break;
+            case 006: {
+                $error = 'Произошла ошибка при добавлении события';
+            }break;
             default: {
                 $error = 'Все работает!!!';
             }

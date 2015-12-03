@@ -7,6 +7,7 @@ Abstract Class Model_Base
     protected $table;
     private $dataResult;
 
+
     public function __construct($select = false)
     {
         // объект бд коннекта
@@ -20,7 +21,25 @@ Abstract Class Model_Base
         $this->table = $tableName;
     }
 
-    // выполнить запрос к бд на получение данных
+    public function type_normal($type, $val){
+        $sql = sprintf("SELECT * FROM CAST('%s' as %s)", $val, $type);
+        $this->_getResult($sql);
+        return $this->getOneRow();
+    }
+
+    public function result_by($array)
+    {
+        $str = '';
+        foreach ($array as $key => $value) {
+            $str = $str . sprintf($key . "='%s' , ", $value);
+        }
+        $pos = strripos($str, ',');
+        $str = substr_replace($str, ' ', $pos);
+        $str = str_replace(',', 'and', $str);
+        $this->select(array('where' => $str));
+        $result = $this->getAllRows();
+        return $result;
+    }
 
     function getAllRows()
     {
@@ -142,8 +161,13 @@ Abstract Class Model_Base
 
     protected function select($select)
     {
-        $sql = $this->_getSelect($select);
-        if ($sql) $this->_getResult("SELECT * FROM $this->table" . $sql);
+        if(!empty($select)){
+            $sql = $this->_getSelect($select);
+            if ($sql) $this->_getResult("SELECT * FROM $this->table" . $sql);
+        }
+        else {
+            $this->_getResult("SELECT * FROM $this->table");
+        }
     }
 
     // уделение записей из базы данных по условию
@@ -188,7 +212,6 @@ Abstract Class Model_Base
                     }
                 }
             }
-
             return $querySql;
         }
         return false;

@@ -18,7 +18,7 @@ Class Controller_Index Extends Controller_Base
         session_start();
         if (!isset($_SESSION['user'])) {
             $model = new Model_profileUser();
-            $result = $model->user_by(array("hash" => $_COOKIE['gatsbu']));
+            $result = $model->result_by(array("hash" => $_COOKIE['gatsbu']));
             if (!$result) {
                 $this->template->vars('menu',
                     array('Авторизация' => 'data-toggle="collapse" data-target="#in"',
@@ -29,7 +29,7 @@ Class Controller_Index Extends Controller_Base
             $_SESSION['user'] = array($result[0]['id'], $result[0]['login']);
         }
         $this->template->vars('menu',
-            array('Настройки' => 'onclick="goHref(/settings/)     "', 'Выход' => sprintf("onclick='isApply(%s)'", '"out"'), 'Сообщения' => 'data="ms"'));
+            array('Настройки' => 'onclick="goHref(/settings/)"', 'Выход' => sprintf("onclick='isApply(%s)'", '"out"'), 'Сообщения' => 'data="ms"'));
         $this->template->view('index');
     }
 } 

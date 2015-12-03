@@ -15,7 +15,7 @@ Class Controller_Sing Extends Controller_Base
             $model = new Model_profileUser();
             $username = $_GET['username'];
             $password = md5($_GET['password']);
-            if ($model->user_by(array('login' => $username))) {
+            if ($model->result_by(array('login' => $username))) {
                 echo json_encode(array('status' => 'error', 'code' => '1'));
                 exit();
             };
@@ -38,7 +38,7 @@ Class Controller_Sing Extends Controller_Base
             $model = new Model_profileUser();
             $username = $_GET['username'];
             $password = md5($_GET['password']);
-            $result = $model->user_by(array('login' => $username));
+            $result = $model->result_by(array('login' => $username));
             if (!$result) {
                 echo json_encode(array('status' => 'error', 'code' => '2'));
                 exit();

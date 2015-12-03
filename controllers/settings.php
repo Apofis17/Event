@@ -12,17 +12,32 @@ Class Controller_Settings Extends Controller_Base
         session_start();
         $id = $_SESSION['user'][0];
         $module = new Model_profileUser();
-        $result = $module->user_by(array('id' => $id));
+        $result = $module->result_by(array('id' => $id));
         if (!$result) {
             http_redirect('/error/?code=004');
+            exit();
+        }
+        if (empty($result[0]['ava'])) {
+            $this->template->vars('urlAva', '/img/no_ava.jpg');
         } else {
-            if (empty($result[0]['ava'])) {
-                $this->template->vars('urlAva', '/img/no_ava.jpg');
-            } else {
-                $file = explode('static', $result[0]['ava']);
-                $this->template->vars('urlAva', $file[count($file) - 1]);
+            $file = explode('static', $result[0]['ava']);
+            $this->template->vars('urlAva', $file[count($file) - 1]);
+        }
+        $model = new Model_profileEvent();
+        $modelImage = new Model_imageEvent();
+        $events = $model->allEvents();
+        if(!empty($events)){
+            foreach($events as $val){
+                $result = $modelImage->imageByEvent($val['id']);
+                if(!empty($result)){
+                    $val['images'] = array();
+                    foreach($result as $image){
+                        array_push($val['image'], $image);
+                    }
+                }
             }
         }
+        $this->template->vars()
         $this->template->view('index');
     }
 
@@ -68,22 +83,36 @@ Class Controller_Settings Extends Controller_Base
         try {
             session_start();
             $id = $_POST['id'];
-            if(empty($id))
-                echo json_encode(array('status' => 'error', 'code' => '000'));
+            if (empty($id)) {
+                echo json_encode(array('status' => 'error', 'code' => '005'));
+                exit();
+            }
             $array = array(
                 'id' => $id,
                 'user_id' => $_SESSION['user'][0],
-                'address' => $_POST['address'],
                 'message' => $_POST['message'],
+                'coordinates' => $_POST['coordinates'],
                 'date_start' => $_POST['date_start'],
                 'date_stop' => $_POST['date_stop'],
-                'coordinates' => $_POST['coordinates'],
-                );
+                'address' => $_POST['address'],
+            );
             $model = new Model_profileEvent();
-            $model->addEventFull($array);
+            $result = $model->addEventFull($array);
+            if (!$result) {
+                echo json_encode(array('status' => 'error', 'code' => '006'));
+                exit();
+            }
+            $model = new Model_imageEvent();
+            $images = $_FILES;
+            foreach ($images as $value) {
+                $image = $this->fileLoad($value);
+                $model->addImage($id, $image);
+            }
+            echo json_encode(array('status' => 'ok', 'code' => '0'));
         }
         catch (Exception $e){
             echo json_encode(array('status' => 'error', 'code' => '000'));
+            exit();
         }
 
     }

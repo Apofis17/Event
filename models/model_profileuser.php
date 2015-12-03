@@ -46,7 +46,7 @@ Class Model_profileUser Extends Model_Base
         }
         $result = $this->save();
         if (!$result) return false;
-        $user = $this->user_by(array("login" => $this->login));
+        $user = $this->result_by(array("login" => $this->login));
         $this->deleteTable();
         $this->id = $user[0]['id'];
         $this->hash = md5($user[0]['id'] . $user[0]['login']);
@@ -55,24 +55,11 @@ Class Model_profileUser Extends Model_Base
         return true;
     }
 
-    public function user_by($array)
-    {
-        $str = '';
-        foreach ($array as $key => $value) {
-            $str = $str . sprintf($key . "='%s' , ", $value);
-        }
-        $pos = strripos($str, ',');
-        $str = substr_replace($str, ' ', $pos);
-        $str = str_replace(',', 'and', $str);
-        $this->select(array('where' => $str));
-        $result = $this->getAllRows();
-        return $result;
-    }
 
     public function out_user($hash)
     {
         $this->deleteTable();
-        $user = $this->user_by(array("hash" => $hash));
+        $user = $this->result_by(array("hash" => $hash));
         if (!$user) return false;
         $this->id = $user[0]['id'];
         $this->is_active = 'f';

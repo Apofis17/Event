@@ -101,8 +101,10 @@ $(function () {
     document.getElementById('save').onclick = function(){
         var address = $('#address').val();
         var message = $('#message').val();
-        var date_start = new Date($('#date_start').val());
-        var date_stop = new Date($('#date_stop').val());
+        var start = $('#date_start').val();
+        var stop = $('#date_stop').val();
+        var date_start = new Date(Number(start.substr(6,4)), Number(start.substr(3,2)) -1, Number(start.substr(0,2)));
+        var date_stop = new Date(Number(stop.substr(6,4)), Number(stop.substr(3,2)) -1, Number(stop.substr(0,2)));
         var now = new Date();
         var fd = new FormData();
         for( i in event_img){
@@ -110,26 +112,26 @@ $(function () {
         }
         if(coordinates == undefined || address == '' || message == '' ) return false;
         if(date_start > date_stop || date_stop < now ) return false;
+        fd.append('coordinates', coordinates);
+        fd.append('address', address);
+        fd.append('message', message);
+        fd.append('date_start', start);
+        fd.append('date_stop', stop);
+        fd.append('id', add_event.id);
+        console.log(1);
         $.ajax({
             url: '/settings/addEventFull/',
             type: 'POST',
             contentType: false,
             processData: false,
-            data: {image: fd,
-                coordinates: coordinates,
-                address:address,
-                message:message,
-                date_start: date_start,
-                date_stop:date_stop,
-                id: add_event.id
-            },
+            data: fd,
             success: function (request) {
                 var data = eval("(" + request + ")");
                 if (data.status == 'error') {
                     window.location.href = '/error/?' + data.code
                 }
                 else {
-                    $('.ava_img').children('img').attr('src', data.args.img)
+                    window.location.href = '/settings/?' + data.code
                 }
             }
         })
@@ -167,7 +169,7 @@ function initialize() {
 }
 
 function addMarker(location, map) {
-    coordinates = [location.lat, location.lng];
+    coordinates = [location.lat(), location.lng()];
     $.ajax({
         url: '/settings/addEvent/',
         type: 'GET',
