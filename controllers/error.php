@@ -20,6 +20,10 @@ Class Controller_Error Extends Controller_Base
         exit();
     }
 
+    /**
+     * @param $code
+     * @return string
+     */
     function codeError($code)
     {
         switch ($code) {
@@ -50,6 +54,12 @@ Class Controller_Error Extends Controller_Base
             }break;
             case 006: {
                 $error = 'Произошла ошибка при добавлении события';
+            }break;
+            case 007: {
+                $error = 'Произошла ошибка при удалении события. Попроуйте перезагрузить страницу и удалить событие заново';
+            }break;
+            case 010: {
+                $error = 'Не получилось обновить событие. Даже не знаем почему!!!';
             }break;
             default: {
                 $error = 'Все работает!!!';

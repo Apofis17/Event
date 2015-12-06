@@ -6,6 +6,11 @@
     protected $event_id;
     protected $image;
 
+    public function deleteImage($column, $address){
+        $str = sprintf("%s = '%s'",$column, $address);
+        $result = $this->deleteBySelect(array('where'=>$str));
+        return $result;
+    }
     public function imageByEvent($id){
         $str = sprintf('event_id = %s', $id);
         $this->select(array('where'=>$str));
@@ -18,6 +23,8 @@
         $this->deleteTable();
         $this->event_id = $id;
         $this->image = $image;
+        $result = $this->result_by(array('image'=>$image));
+        if($result) return false;
         $result = $this->save();
         if (!$result) return false;
         return true;

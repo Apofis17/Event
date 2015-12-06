@@ -1,5 +1,14 @@
 <div class="container">
     <link href="/css/settings.css" rel="stylesheet" type="text/css">
+    <script>
+        var Edata = <?= json_encode($events) ?>;
+        if(Edata != null){
+            var EventData = {};
+            for(var i = 0; i < Edata.length; i++){
+                EventData[Edata[i].id] = Edata[i]
+            }
+        }
+    </script>
     <script src="/js/settings.js"></script>
     <link type="text/css" href="/custom/css/flick/jquery-ui-1.9.2.custom.min.css" rel="stylesheet"/>
     <script src="/custom/js/jquery-1.8.3.js" type="text/javascript"></script>
@@ -79,9 +88,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-3 col-md-3 col-md-offset-1 col-lg-offset-1 buton-w">
-                    <button class="btn my_btn btn-sm" id="save">Сохранить</button>
-                    <button class="btn my_btn_not btn-sm" data-toggle="collapse" data-target="#add">Отмена</button>
+                    <button class="btn my_btn btn-sm d2">Сохранить</button>
+                    <button class="btn my_btn_not btn-sm d3" data-toggle="collapse" data-target="#add">Отмена</button>
                 </div>
             </div>
             <div class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1">
@@ -91,30 +102,45 @@
     </div>
     <div class="row">
         <h4 class="header_title">Мои события</h4>
-
-        <div class="container">
-            <? if (empty($event)) { ?>
+        <div class="container full_list_events">
+            <? if (empty($events)) { ?>
                 <h5>У вас нету событий!</h5>
+            <? } else {?>
+                <? foreach($events as $val){ ?>
+                    <div class="col-lg-10 col-md-10 col-md-offset-1 col-lg-offset-1 event" data="<?= $val['id'] ?>">
+                        <div class="col-lg-12 col-md-12 address_event">
+                            <div class="col-lg-2 col-md-2 text-right"> Адрес :</div>
+                            <div class="col-lg-9 col-md-9 pull-left"><?= $val['address']?></div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 message_event">
+                            <div class="col-lg-2 col-md-2 text-right"> Информация :</div>
+                            <div class="col-lg-9 col-md-9 pull-left"><?= $val['message']?></div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 date_start_event">
+                            <div class="col-lg-2 col-md-2 text-right"> Началo :</div>
+                            <div class="col-lg-9 col-md-9 pull-left"><?= $val['date_start']?></div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 date_stop_event">
+                            <div class="col-lg-2 col-md-2 text-right"> Конец :</div>
+                            <div class="col-lg-9 col-md-9 pull-left"><?= $val['date_stop']?></div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 image_event collapse" id="w12_<?= $val['id'] ?>">
+                            <div id="xs">
+                                <? foreach($val['images'] as $value) {?>
+                                    <div class="one-img">
+                                        <img src="<?= $value ?>">
+                                    </div>
+                                <? } ?>
+                            </div>
+                        </div>
+                        <button class="btn my_btn btn-sm" data-toggle="collapse" data-target="#w12_<?= $val['id'] ?>">Фотографии</button>
+                        <button class="btn my_btn btn-sm reload_event" data="<?= $val['id']?>" data-toggle="collapse" data-target="#add">Редактировать</button>
+                        <button class="btn my_btn_not btn-sm delete_event_all" data="<?= $val['id']?>">Удалить</button>
+                    </div>
+                    <hr>
+                <? } ?>
             <? } ?>
         </div>
     </div>
-
-    <!---->
-    <!--    <div class="row display_none">-->
-    <!--        <div class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1">-->
-    <!--            <div id="map"></div>-->
-    <!--        </div>-->
-    <!--    </div>-->
-    <!--    <div class="row r12oww display_none">-->
-    <!--         <div id="content">-->
-    <!--             <button class="btn my_btn btn-xs editing" data-toggle="collapse" data-target="#editing"><i class="fa fa-pencil"></i></button>-->
-    <!--             <button class="btn my_btn_not btn-xs remove"><i class="fa fa-times"></i></button>-->
-    <!--         </div>-->
-    <!--    </div>-->
-    <!---->
-    <!--    <div class="full_block collapse" id="editing">-->
-    <!--        <div class="white-block col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1">-->
-    <!--        </div>-->
-    <!--    </div>-->
 </div>
 

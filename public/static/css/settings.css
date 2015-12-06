@@ -237,3 +237,53 @@ body #add .information-event #date_stop {
   width: 100px;
   float: left;
 }
+body .full_list_events .event {
+  margin-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 1px solid #02988d;
+}
+body .full_list_events .event:first-child {
+  border-top-width: 1px;
+}
+body .full_list_events .event .address_event {
+  padding-top: 5px;
+  border: 0px solid #02988d;
+  border-bottom-width: 1px;
+}
+body .full_list_events .event .message_event {
+  padding-top: 5px;
+  border: 0px solid #02988d;
+  border-bottom-width: 1px;
+}
+body .full_list_events .event .date_start_event {
+  padding-top: 5px;
+}
+body .full_list_events .event .date_stop_event {
+  border: 0px solid #02988d;
+  border-bottom-width: 1px;
+}
+body .full_list_events .event button {
+  margin-top: 10px;
+}
+body .full_list_events .event .image_event {
+  border: 0px solid #02988d;
+  border-bottom-width: 1px;
+  max-height: 300px;
+  overflow-y: scroll;
+  padding: 5px 20px 5px;
+}
+body .full_list_events .event .image_event #xs {
+  width: auto;
+  height: auto;
+  overflow-y: hidden;
+}
+body .full_list_events .event .image_event .one-img {
+  margin: 5px;
+  display: inline-block;
+  border: 2px solid #6a0ca5;
+}
+body .full_list_events .event .image_event .one-img img {
+  height: 70px;
+  width: auto;
+}

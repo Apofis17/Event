@@ -110,4 +110,56 @@ body {
       }
     }
   }
+  .full_list_events{
+    .event{
+      margin-bottom: 20px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border: 1px solid @color_first;
+      &:first-child{
+        border-top-width: 1px;
+      }
+      .address_event{
+        padding-top: 5px;
+        border: 0px solid @color_first;
+        border-bottom-width: 1px;
+      }
+      .message_event{
+        padding-top: 5px;
+        border: 0px solid @color_first;
+        border-bottom-width: 1px;
+      }
+      .date_start_event{
+        padding-top: 5px;
+      }
+      .date_stop_event{
+        border: 0px solid @color_first;
+        border-bottom-width: 1px;
+      }
+      button{
+        margin-top: 10px;
+      }
+      .image_event{
+        border: 0px solid @color_first;
+        border-bottom-width: 1px;
+        max-height: 300px;
+        overflow-y: scroll;
+        padding: 5px 20px 5px;
+        #xs {
+          width: auto;
+          height: auto;
+          overflow-y: hidden;
+        }
+        .one-img {
+          margin: 5px;
+          display: inline-block;
+          border: 2px solid @color_last;
+          img {
+            height: 70px;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
 }

@@ -35,5 +35,21 @@ protected $layouts;
         return $dir2 . $file['name'];
     }
 
+    function isActive()
+    {
+        if (!isset($_COOKIE['gatsbu'])) {
+            return 0;
+        }
+        session_start();
+        if (!isset($_SESSION['user'])) {
+            $model = new Model_profileUser();
+            $result = $model->result_by(array("hash" => $_COOKIE['gatsbu']));
+            if (!$result) {
+                return 1;
+            }
+            $_SESSION['user'] = array($result[0]['id'], $result[0]['login']);
+        }
+        return 2;
+    }
     abstract function index();
 }

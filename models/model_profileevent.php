@@ -11,8 +11,19 @@ Class Model_profileEvent Extends Model_Base
     protected $address;
 
     public function allEvents(){
-        $this->select(false);
+        $this->select(array('ORDER'=>'id'));
         $result = $this->getAllRows();
+        return $result;
+    }
+
+    public function  deleteAllEvent($id, $user){
+        $result = $this->result_by(array(
+            'id' => $id,
+            'user_id' => $user
+        ));
+        if (!$result) return false;
+        $str = sprintf('id = %s and user_id = %s', $id, $user);
+        $result = $this->deleteBySelect(array('where'=>$str));
         return $result;
     }
 
@@ -49,10 +60,11 @@ Class Model_profileEvent Extends Model_Base
         ));
         if(!$result) return false;
         foreach ($array as $key=>$value) {
-            $t = $key == 'date_start';
             if($key == 'date_start' || $key =='date_stop') {
-                $result = $this->type_normal('DATE', $value);
-                $this->$key = $result[0];
+                if (!empty($value)) {
+                    $result = $this->type_normal('DATE', $value);
+                    $this->$key = $result[0];
+                }
             }
             else{
                 $this->$key = $value;
