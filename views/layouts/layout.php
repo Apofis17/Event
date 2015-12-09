@@ -20,7 +20,11 @@
         </div>
         <div class="menu pull-right">
             <? foreach ($menu as $key => $value) { ?>
-                <button class="btn my_btn btn-sm btn_navigation" <?= $value ?>><?= $key ?></button>
+                <? if($key == 'ms') {?>
+                    <a class="btn my_btn btn-sm btn_navigation" href="/message/userEvent/">Сообщения</a>
+                <?}else{?>
+                    <button class="btn my_btn btn-sm btn_navigation" <?= $value ?>><?= $key ?></button>
+                <? } ?>
             <? } ?>
         </div>
     </div>

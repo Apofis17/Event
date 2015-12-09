@@ -127,6 +127,12 @@ body .base_block #map {
   width: auto;
   height: 500px;
 }
+body .base_block #map #content button {
+  margin-left: 10px;
+}
+body .base_block #map #content button:nth-child(2) {
+  margin-left: 0 !important;
+}
 body .header_title {
   color: #666;
   padding-left: 10px;

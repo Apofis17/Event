@@ -1,6 +1,6 @@
 CREATE SEQUENCE profile_user_id;
 
-create table profile_user(
+create table profileuser(
     id integer not null DEFAULT nextval('profile_user_id') primary key,
     login varchar(80) not null, 
     password varchar(150) not null, 
@@ -12,7 +12,7 @@ create table profile_user(
 
 CREATE SEQUENCE profile_event_id;
 
-create table profile_event(
+create table profileevent(
     id integer not null DEFAULT nextval('profile_event_id') primary key,
     user_id integer not null, 
     coordinates varchar(200) not null,
@@ -29,13 +29,14 @@ create table imageevent(
     FOREIGN KEY (event_id) REFERENCES profileevent(id) ON DELETE CASCADE on update cascade,
 );
 
-CREATE SEQUENCE profession_id;
+CREATE SEQUENCE correspondence_id;
 
-create table profession(
-    id integer not null DEFAULT nextval('profession_id') primary key,
+create table correspondence(
+    id integer not null DEFAULT nextval('correspondence_id') primary key,
     event_id integer not null,
-    user_id integer not null, 
-    text_profession varchar(200) not null,
-    FOREIGN KEY (user_id) REFERENCES profile_user(id) ON DELETE CASCADE on update cascade,
-    FOREIGN KEY (event_id) REFERENCES profile_event(id) ON DELETE CASCADE on update cascade,
+    user_id integer not null,
+    parent integer DEFAULT -1,
+    text text not null,
+    FOREIGN KEY (user_id) REFERENCES profileuser(id) ON DELETE CASCADE on update cascade,
+    FOREIGN KEY (event_id) REFERENCES profileevent(id) ON DELETE CASCADE on update cascade
 );

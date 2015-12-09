@@ -133,3 +133,49 @@ body .base_block #map #content button {
 body .base_block #map #content button:nth-child(2) {
   margin-left: 0 !important;
 }
+.e32 {
+  height: 100%;
+  overflow-y: scroll;
+}
+.e32 .row {
+  margin-right: 0;
+  margin-left: 0;
+}
+.e32 .row button {
+  margin-top: 20px;
+}
+.e32 #carousel {
+  margin-left: auto;
+  margin-right: auto;
+}
+.e32 #carousel img {
+  border: 1px solid #02988d;
+  height: 300px;
+  width: auto;
+}
+.e32 .slider {
+  width: 90%;
+  max-height: 250px;
+  overflow-y: scroll;
+  border: 1px solid #02988d;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 15px 20px 5px;
+  margin-top: 20px;
+}
+.e32 .slider #xs {
+  width: 100%;
+  height: auto;
+}
+.e32 .slider .one-img {
+  margin: 5px;
+  display: inline-block;
+  border: 2px solid #6a0ca5;
+}
+.e32 .slider .one-img img {
+  height: 70px;
+  width: auto;
+}
+.e32 .slider .visi {
+  border: 2px solid #02988d;
+}

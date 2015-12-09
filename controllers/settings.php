@@ -13,7 +13,7 @@ Class Controller_Settings Extends Controller_Base
             exit();
         }
         $this->template->vars('menu',
-            array('Назад' => '/'));
+            array('Назад' => 'onclick="goHref()"'));
         session_start();
         $id = $_SESSION['user'][0];
         $module = new Model_profileUser();
@@ -30,7 +30,7 @@ Class Controller_Settings Extends Controller_Base
         }
         $model = new Model_profileEvent();
         $modelImage = new Model_imageEvent();
-        $events = $model->allEvents();
+        $events = $model->allEvents($id, 1);
         $response = array();
         if(!empty($events)){
             foreach($events as $val){
@@ -177,6 +177,8 @@ Class Controller_Settings Extends Controller_Base
                 exit();
             }
             $result = $model->deleteImage('event_id', $id);
+            $model = new Model_correspondence();
+            $result = $model->deleteCor('event_id', $id);
             if(!$result){
                 echo json_encode(array('status' => 'error', 'code' => '007'));
                 exit();

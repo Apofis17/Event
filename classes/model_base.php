@@ -30,7 +30,9 @@ Abstract Class Model_Base
     public function result_by($array)
     {
         $str = '';
+        $num = 0;
         foreach ($array as $key => $value) {
+            $num ++;
             $str = $str . sprintf($key . "='%s' , ", $value);
         }
         $pos = strripos($str, ',');
@@ -98,6 +100,19 @@ Abstract Class Model_Base
         }
 
         return $result;
+    }
+
+    public function maxId(){
+        $sql = 'select * from '.$this->table.'_id';
+        try {
+            $db = $this->db;
+            $stmt = $db->query($sql);
+            $rows = $stmt->fetchAll();
+            return $rows;
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+            exit;
+        }
     }
 
     // запись в базу данных

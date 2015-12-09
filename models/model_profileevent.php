@@ -10,10 +10,31 @@ Class Model_profileEvent Extends Model_Base
     protected $date_stop;
     protected $address;
 
-    public function allEvents(){
-        $this->select(array('ORDER'=>'id'));
+    public function allEvents($id, $stat){
+        if($stat == 1){
+            $str = 'user_id = '.$id;
+            $this->select(array('where'=>$str,'ORDER'=>'id'));
+        }else{
+            $this->select(array('ORDER'=>'id'));
+        }
         $result = $this->getAllRows();
         return $result;
+    }
+
+    public  function eventByUser($id){
+        $str = 'user_id = '.$id;
+        $this->select(array('where'=>$str));
+        $result = $this->getAllRows();
+        if(!$result) return false;
+        return count($result);
+    }
+
+    public function userByEvent($id){
+        $str = 'id = '.$id;
+        $this->select(array('where'=>$str));
+        $result = $this->getOneRow();
+        if(!$result) return false;
+        return $result['user_id'];
     }
 
     public function  deleteAllEvent($id, $user){

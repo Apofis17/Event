@@ -226,7 +226,6 @@ $(function () {
 
     }).on('click', '.delete_event_all', function () {
         var idi = $(this).attr('data');
-        console.log(idi);
         $('.event[data=' + idi + ']').remove();
         delete EventData[idi];
         $.ajax({
@@ -391,4 +390,11 @@ function geocodeAddress(geocoder, location) {
             $('#address').val('Не удалось получить адрес!');
         }
     });
+}
+function goHref(url) {
+    if(url == undefined) {
+        window.location.href = '/';
+    }else{
+        window.location.href = url;
+    }
 }
