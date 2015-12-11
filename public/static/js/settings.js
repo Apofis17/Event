@@ -304,8 +304,8 @@ function initialize(status) {
         $.datepicker.setDefaults(
             $.extend($.datepicker.regional["ru"])
         );
-        $("#date_start").datepicker();
-        $("#date_stop").datepicker();
+        $("#date_start").datepicker({ dateFormat: 'yy-mm-dd'});
+        $("#date_stop").datepicker({ dateFormat: 'yy-mm-dd'});
         console.log(EventData[id].address == undefined);
         if(EventData[id].address == undefined){
             geocodeAddress(geocoder, {lat: Number(coordinates[0]), lng: Number(coordinates[1])})
@@ -374,8 +374,8 @@ function addMarker(location, map) {
     $.datepicker.setDefaults(
         $.extend($.datepicker.regional["ru"])
     );
-    $("#date_start").datepicker();
-    $("#date_stop").datepicker();
+    $("#date_start").datepicker({ altFormat: 'yy-mr'});
+    $("#date_stop").datepicker({ altFormat: 'yy-mr'});
 }
 
 function geocodeAddress(geocoder, location) {

@@ -35,8 +35,8 @@ Class Controller_Settings Extends Controller_Base
         if(!empty($events)){
             foreach($events as $val){
                 $coordinates = explode(' ', $val['coordinates']);
-                $start = empty($val['date_start']) ? '' : date("d.m.Y", strtotime($val['date_start']));
-                $stop = empty($val['date_stop']) ? '' : date("d.m.Y", strtotime($val['date_stop']));
+                $start = empty($val['date_start']) ? '' : date("Y-m-d", strtotime($val['date_start']));
+                $stop = empty($val['date_stop']) ? '' : date("Y-m-d", strtotime($val['date_stop']));
                 array_push($response, array(
                     'address' => $val['address'],
                     'id' => $val['id'],
