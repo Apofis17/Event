@@ -7,7 +7,6 @@ Class Controller_Index Extends Controller_Base
 
     // экшен
 	// экшен
-	// экшен
     function index()
     {
         $active = $this->isActive();
