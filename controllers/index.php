@@ -5,7 +5,7 @@ Class Controller_Index Extends Controller_Base
     // шаблон
     public $layouts = "layout";
 
-    // экшен
+    // экшен 1221
     // gitHub
 	// экшен
     function index()
