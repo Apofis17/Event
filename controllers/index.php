@@ -6,7 +6,7 @@ Class Controller_Index Extends Controller_Base
     public $layouts = "layout";
 
     // экшен экшен экшен
-    // gitHub
+    // gitHub rewwwww
 	// экшен
     function index()
     {
